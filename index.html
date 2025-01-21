@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- Created with https://packager.turbowarp.org/ -->
+<!-- https://packager.turbowarp.org/で作成 -->
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <!-- We only include this to explicitly loosen the CSP of various packager environments. It does not provide any security. -->
+  <!-- さまざまなパッケージ環境のCSPを明示的に緩めるためにのみ、これを含めます。それは何のセキュリティも提供しません。 -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob:">
   <title>yet-dl</title>
   <style>
@@ -288,9 +288,9 @@
         };
         xhr.onerror = () => {
           if (location.protocol === 'file:') {
-            reject(new Error('Zip environment must be used from a website, not from a file URL.'));
+            reject(new Error('Zip環境は、ファイルのURLからではなく、Webサイトから使用する必要があります。'));
           } else {
-            reject(new Error('Request to load project data failed.'));
+            reject(new Error('プロジェクトデータの読み込み要求に失敗しました。'));
           }
         };
         xhr.onprogress = (e) => {
